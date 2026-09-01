@@ -1,0 +1,23 @@
+# Virtual Environment
+venv/
+
+# Environment Variables
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Generated Reports
+Business_Report.pdf
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+# Database
+*.db
+
+# Generated reports (per-run)
+reports_output/

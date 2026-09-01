@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  enterprise-workflow-platform:
+    build: .
+    ports:
+      - "8501:8501"   # Streamlit UI
+      - "8000:8000"   # FastAPI REST API
+    env_file:
+      - .env
+    volumes:
+      - workflow_data:/app/data
+      - ./reports_output:/app/reports_output
+    environment:
+      - DATABASE_URL=sqlite:////app/data/enterprise_workflow.db
+
+volumes:
+  workflow_data:
